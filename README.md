@@ -12,29 +12,27 @@ You can find the homepage for this CTF
 
 1.  **FBIescape(100 | Easy)**
 
-    FBI is looking for you so don’t get tracked buddy I know you can use your head and run away. Link → 
+    FBI is looking for you so don’t get tracked buddy I know you can use your head and run away. 
+    Link → http://13.76.44.81/ 
 
 Add Do Not Track Header and use HEAD request by following:
 
-    Linux: curl -X HEAD 
-     -H “DNT:1”
+    Linux: curl -X HEAD http://13.76.44.81/ -H “DNT:1”
 
-    Windows: curl head 
-     -H “DNT:1”
+    Windows: curl head http://13.76.44.81/ -H “DNT:1”
 
 ![](https://cdn-images-1.medium.com/max/800/1*DcsPHKA90MbJidNmlRaF3w.png)
 <br><span class="figcaption_hack">HEADER Content</span>
 
 **2. BlackClover(250 | Medium)**
 
-    Welcome to clover kingdom :) visit here : 
+    Welcome to clover kingdom :) visit here : http://40.65.167.131/
 
 By enumerating the directory using tools like dirsearch, you’ll get a
 security.txt as *.well-known/security.txt *giving a hint as **devil **indicating
 that we can do an LFI attack on this parameter using this:
 
-    curl -X POST 
-     -d "devil=php://filter/resource=/flag”
+    curl -X POST http://40.65.167.131/ -d "devil=php://filter/resource=/flag”
 
 ![](https://cdn-images-1.medium.com/max/800/1*-biwOG8dli9U_qFZV7XLMg.png)
 <br><span class="figcaption_hack">FLAG</span>
@@ -42,6 +40,7 @@ that we can do an LFI attack on this parameter using this:
 **3. SHAttered(500 | Hard)**
 
     Prove me that you can shatter my page and get the flag. 
+    http://168.63.250.254/
 
 1. This challenge is based on broken sha1 algo. <br> 2. You need to pass first
 500 bytes from pdf of shattered or make your own then pass them in name and
@@ -71,6 +70,8 @@ combination for n and divide it by p to get q and also verify if q which we’ve
 got is prime or not, if it is prime then try to decode the encrypted flag.
 Here’s the Python script for the above mentioned process.
 
+https://gist.github.com/codekingdroid/28a1c63a71ab150195bb64aa938c8325.js
+
 ![](https://cdn-images-1.medium.com/max/800/1*faYPrJawSAWqUiVPLFvZKw.png)
 <br><span class="figcaption_hack">FLAG</span>
 
@@ -78,8 +79,7 @@ Here’s the Python script for the above mentioned process.
 
     I xored my secret file and I noted the time when I did this. This is what I have for you 
 
-    Files: 
-     & 
+    Files: [enc_flag](https://github.com/codekingdroid/ByPassCTF-21/blob/main/CRYPTO/Little_Information_Leaks_A_Lot/enc_flag) & [main.py](https://github.com/codekingdroid/ByPassCTF-21/blob/main/CRYPTO/Little_Information_Leaks_A_Lot/main.py) 
 
 In this challenge we are given the date and time and I am also using that as
 seed but *time.time()* return seconds, so we have to convert the given date into
