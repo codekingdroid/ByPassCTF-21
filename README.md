@@ -1,5 +1,4 @@
 ![](https://cdn-images-1.medium.com/max/800/1*MXlAZ9fzOBiBvjEErVn3Fw.png)
-<br><center><span class="figcaption_hack">SOLUTIONS’21</span></center>
 
 <h1>### ByPass CTF 2021 Write-up ###</h1>
 
@@ -121,9 +120,9 @@ flag.
 We’re given a zip file and a python code which performs the following
 operations:
 <ul>
-    <li>Creates *zip_name* of random length(1–10) character</li><br> 
-    <li>Every character of the flag is encrypted via md5 and stored in *flag_hash*</li><br> 
-    <li>*zip_name*’s md5 encrypted string is stored in *zip_pass*</li>
+    <li>Creates <b>zip_name</b> of random length(1–10) character</li><br> 
+    <li>Every character of the flag is encrypted via md5 and stored in <b>flag_hash</b></li><br> 
+    <li><b>zip_name</b>’s md5 encrypted string is stored in <b>zip_pass</b></li>
 
 So inside every zip folder, the files in format: (num).(2char) is something to
 be looked upon as concatenating their char in sorted order of their respective
