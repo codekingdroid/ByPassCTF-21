@@ -1,5 +1,5 @@
 ![](https://cdn-images-1.medium.com/max/800/1*MXlAZ9fzOBiBvjEErVn3Fw.png)
-<span class="figcaption_hack">SOLUTIONS’21</span>
+<br><span class="figcaption_hack">SOLUTIONS’21</span>
 
 ### ByPass CTF 2021 Write-up
 
@@ -23,7 +23,7 @@ Add Do Not Track Header and use HEAD request by following:
      -H “DNT:1”
 
 ![](https://cdn-images-1.medium.com/max/800/1*DcsPHKA90MbJidNmlRaF3w.png)
-<span class="figcaption_hack">HEADER Content</span>
+<br><span class="figcaption_hack">HEADER Content</span>
 
 **2. BlackClover(250 | Medium)**
 
