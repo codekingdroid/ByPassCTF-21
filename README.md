@@ -1,7 +1,7 @@
 ![](https://cdn-images-1.medium.com/max/800/1*MXlAZ9fzOBiBvjEErVn3Fw.png)
-<br><span class="figcaption_hack">SOLUTIONS’21</span>
+<br><center><span class="figcaption_hack">SOLUTIONS’21</span></center>
 
-<h1>### ByPass CTF 2021 Write-up</h1>
+<h1>### ByPass CTF 2021 Write-up ###</h1>
 
 #### <The quieter you become, the more you are able to hear/>
 
