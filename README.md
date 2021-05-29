@@ -1,7 +1,7 @@
 ![](https://cdn-images-1.medium.com/max/800/1*MXlAZ9fzOBiBvjEErVn3Fw.png)
 <br><span class="figcaption_hack">SOLUTIONS’21</span>
 
-### ByPass CTF 2021 Write-up
+<h1>### ByPass CTF 2021 Write-up</h1>
 
 #### <The quieter you become, the more you are able to hear/>
 
@@ -37,7 +37,7 @@ that we can do an LFI attack on this parameter using this:
      -d "devil=php://filter/resource=/flag”
 
 ![](https://cdn-images-1.medium.com/max/800/1*-biwOG8dli9U_qFZV7XLMg.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 **3. SHAttered(500 | Hard)**
 
@@ -52,7 +52,7 @@ password parameters.
 Note: Try on Linux if doesn’t works on Windows.
 
 ![](https://cdn-images-1.medium.com/max/800/1*FazmL-XlBGjrzLL43PUaLw.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 ### CRYPTO
 
@@ -72,7 +72,7 @@ got is prime or not, if it is prime then try to decode the encrypted flag.
 Here’s the Python script for the above mentioned process.
 
 ![](https://cdn-images-1.medium.com/max/800/1*faYPrJawSAWqUiVPLFvZKw.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 **2. Little_Information_Leaks_A_Lot(250 | Medium)**
 
@@ -86,7 +86,7 @@ seed but *time.time()* return seconds, so we have to convert the given date into
 seconds and use them as seed and then we can reverse the* xor* to get the flag.
 
 ![](https://cdn-images-1.medium.com/max/800/1*wu4OY7aNaZP7vqhyx9admQ.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 **3. RSA_2.0(250 | Medium)**
 
@@ -109,7 +109,7 @@ e and phi are not *co-primes*. This time we have to modify our scripts to get
 flag.
 
 ![](https://cdn-images-1.medium.com/max/800/1*Ar2UiohGvK4sQmNrcvUNuw.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 **4. I_will_never_Stop(500 | Hard)**
 
@@ -120,10 +120,10 @@ flag.
 
 We’re given a zip file and a python code which performs the following
 operations:
-
-# Creates *zip_name* of random length(1–10) character<br> # Every character of
-the flag is encrypted via md5 and stored in *flag_hash*<br> # *zip_name*’s md5
-encrypted string is stored in *zip_pass*
+<ul>
+    <li>Creates *zip_name* of random length(1–10) character</li><br> 
+    <li>Every character of the flag is encrypted via md5 and stored in *flag_hash*</li><br> 
+    <li>*zip_name*’s md5 encrypted string is stored in *zip_pass*</li>
 
 So inside every zip folder, the files in format: (num).(2char) is something to
 be looked upon as concatenating their char in sorted order of their respective
@@ -132,7 +132,7 @@ num we get a string which is a md5 hash representing a single char of the flag.
 The process can be automated using the Python script as given below:
 
 ![](https://cdn-images-1.medium.com/max/800/1*xVfnCCS2CkEnboYKL8Pv5Q.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 ### MISC
 
@@ -149,7 +149,7 @@ convert the image to its *hexdump* from the option in the protocol analyser of
 *Wireshark* and copy that hexdump to *cyberchef* you will get your flag.
 
 ![](https://cdn-images-1.medium.com/max/800/1*eO7g8r5qjPjZVBfYY4m3Og.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 **2. Investigation(500 | Hard)**
 
@@ -162,7 +162,7 @@ shadow and passwd file. <br> 3. Brute force using *JohnTheRipper* to get
 password which is the flag.
 
 ![](https://cdn-images-1.medium.com/max/800/1*yyMMnfXGGwGOeZi7TmalaA.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 ### MEM FORENSIC
 
@@ -183,7 +183,7 @@ check the command executed via console plugin by:
 You will find a base64 string, decode it to get your flag.
 
 ![](https://cdn-images-1.medium.com/max/800/1*4i5DkwOCmiAKhlkwSg033Q.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 **2. N3v3r C0py M3(250 | Medium)**
 
@@ -196,7 +196,7 @@ plugin by:
 > vol.py -f dump.raw — profile=Win81U1x64 clipboard
 
 ![](https://cdn-images-1.medium.com/max/800/1*zdGqlkqRxu9EpbUBhCwdew.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 **3. my_advice(250 | Medium)**
 
@@ -217,7 +217,7 @@ get the password as “*hacked*”.
 > decode this: 31e8aa4d81712d3c5f0b0b271206041e
 
 ![](https://cdn-images-1.medium.com/max/800/1*psxg1htLaCwcVno-F1snvw.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 **4. How he Login to APT site ???(500 | Hard)**
 
@@ -244,7 +244,7 @@ internet entries.
 > vol.py -f dump.raw — profile=Win81U1x64 dumpfiles -D . -Q 0x00000000266b05f0
 
 ![](https://cdn-images-1.medium.com/max/800/1*uXT1dNsrH4K4_AZqk-jyKw.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 ### DISK FORENSIC
 
@@ -262,7 +262,7 @@ will be something in the recycle bin when you check the bin you get file named
 *R74SPM.txt* it has the flag.
 
 ![](https://cdn-images-1.medium.com/max/800/1*pZkONMXVqBLstZRddSrjnQ.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 **2. FIREeye Why ?(250 | Medium)**
 
@@ -276,7 +276,7 @@ use [cracker](https://github.com/pradeep1288/ffpasscracker) to crack the
 password and we will got our flag.
 
 ![](https://cdn-images-1.medium.com/max/800/1*c_sTL8SsQLib45Rw6nalmQ.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 **3. Self Mistakes(500 | Hard)**
 
@@ -293,7 +293,7 @@ one code which have xored flag.
 Just reverse the code to get the flag
 
 ![](https://cdn-images-1.medium.com/max/800/1*pxZJPUt83wU2hUtBjSqi-Q.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 **4. Oh! He is too smart(500 | Hard)**
 
@@ -323,7 +323,7 @@ of the vulnfreak. Now when we check we get the creds
 Just login and you will get your flag
 
 ![](https://cdn-images-1.medium.com/max/800/1*ghJEYRvEuzHFU_9vowoa6g.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 ### OSINT
 
@@ -344,7 +344,7 @@ started. Then if you go to the tooter and search for the *cord cy* you will find
 the account, it has the flag in the toots.
 
 ![](https://cdn-images-1.medium.com/max/800/1*oehe4-9WFEqlLl_YyjTSyA.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 **2. Ilovemusic(250 | Medium)**
 
@@ -356,7 +356,7 @@ twitter account which has 1st half of the flag and a Spotify link which leads us
 to its left half.
 
 ![](https://cdn-images-1.medium.com/max/800/1*IeY6S-xNDEILqKrtkKj9Pw.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 ### FORENSIC
 
@@ -372,6 +372,6 @@ down you will find a url:
 Password is in base64 decode that and get your flag.
 
 ![](https://cdn-images-1.medium.com/max/800/1*z8N7gptSfkQSSiZTuYkboQ.png)
-<span class="figcaption_hack">FLAG</span>
+<br><span class="figcaption_hack">FLAG</span>
 
 <br> 
