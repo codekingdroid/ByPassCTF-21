@@ -15,7 +15,7 @@ You can find the homepage for this CTF
     FBI is looking for you so don’t get tracked buddy I know you can use your head and run away. 
     Link → http://13.76.44.81/ 
 
-Add Do Not Track Header and use HEAD request by following:
+    Add Do Not Track Header and use HEAD request by following:
 
     Linux: curl -X HEAD http://13.76.44.81/ -H “DNT:1”
 
@@ -70,7 +70,7 @@ combination for n and divide it by p to get q and also verify if q which we’ve
 got is prime or not, if it is prime then try to decode the encrypted flag.
 Here’s the Python script for the above mentioned process.
 
-https://gist.github.com/codekingdroid/28a1c63a71ab150195bb64aa938c8325.js
+<script src="https://gist.github.com/codekingdroid/28a1c63a71ab150195bb64aa938c8325.js"></script>
 
 ![](https://cdn-images-1.medium.com/max/800/1*faYPrJawSAWqUiVPLFvZKw.png)
 <br><span class="figcaption_hack">FLAG</span>
