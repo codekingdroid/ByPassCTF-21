@@ -78,8 +78,8 @@ Here’s the Python script for the above mentioned process.
 
     I xored my secret file and I noted the time when I did this. This is what I have for you 
 
-    Files: <a href="https://github.com/codekingdroid/ByPassCTF-21/blob/main/CRYPTO/Little_Information_Leaks_A_Lot/enc_flag">[enc_flag]</a> & <a href="https://github.com/codekingdroid/ByPassCTF-21/blob/main/CRYPTO/Little_Information_Leaks_A_Lot/main.py">[main.py]</a>
-
+   Files: <a href="https://github.com/codekingdroid/ByPassCTF-21/blob/main/CRYPTO/Little_Information_Leaks_A_Lot/enc_flag">[enc_flag]</a> & <a href="https://github.com/codekingdroid/ByPassCTF-21/blob/main/CRYPTO/Little_Information_Leaks_A_Lot/main.py">[main.py]</a>
+   
 In this challenge we are given the date and time and I am also using that as
 seed but **time.time()** return seconds, so we have to convert the given date into
 seconds and use them as seed and then we can reverse the* xor* to get the flag.
@@ -119,7 +119,7 @@ e and phi are not **co-primes**. This time we have to modify our scripts to get 
 
     You always bully me because of my week encryption algorithm but this time you all will cry :)
 
-    Files: <a href="https://github.com/codekingdroid/ByPassCTF-21/raw/main/CRYPTO/I_will_never_Stop/challenge.zip">challenge.zip</a> & <a href="https://github.com/codekingdroid/ByPassCTF-21/blob/main/CRYPTO/I_will_never_Stop/main.py">main.py</a>
+   Files: <a href="https://github.com/codekingdroid/ByPassCTF-21/raw/main/CRYPTO/I_will_never_Stop/challenge.zip">challenge.zip</a> & <a href="https://github.com/codekingdroid/ByPassCTF-21/blob/main/CRYPTO/I_will_never_Stop/main.py">main.py</a>
 
 We’re given a zip file and a python code which performs the following
 operations:
@@ -133,9 +133,9 @@ be looked upon as concatenating their char in sorted order of their respective
 num we get a string which is a md5 hash representing a single char of the flag.
 
 The process can be automated using the Python script as given below:
-    
-    **<a href="https://gist.githubusercontent.com/hmrserver/36c4f8427bcbd472ba06e59617de4edc/raw/4604a08b232127145cab0acb6955800a0c7f37cf/I_will_never_Stop.py">I_will_never_Stop.py</a>**
 
+**<a href="https://gist.githubusercontent.com/hmrserver/36c4f8427bcbd472ba06e59617de4edc/raw/4604a08b232127145cab0acb6955800a0c7f37cf/I_will_never_Stop.py">I_will_never_Stop.py</a>**
+	
 ![](https://cdn-images-1.medium.com/max/800/1*xVfnCCS2CkEnboYKL8Pv5Q.png)
 <br><span class="figcaption_hack">FLAG</span>
 
@@ -144,8 +144,9 @@ The process can be automated using the Python script as given below:
 **1. Why we all are fighting :/ (250 | Medium)**
 
     In todays world everyone is fighting with each other. Some people want to stop this therefore they using technology to stop these riots. But politicians doesn’t want the fights to be stopped therefore they forced us to investigate the system for those persons who want to stop riots. Politicians are saying we will find something serious. Can you help us to prove them wrong?
-    FILE: <a href="https://github.com/codekingdroid/ByPassCTF-21/raw/main/MISC/Why%20we%20all%20are%20fighting/need_peace.pcapng">need_peace.pcapng</a>
 
+FILE: <a href="https://github.com/codekingdroid/ByPassCTF-21/raw/main/MISC/Why%20we%20all%20are%20fighting/need_peace.pcapng">need_peace.pcapng</a>
+	
 In this we are given a pcap file, if we check what type of protocols it has,
 we’ll find that it has HTTPS ( TCP ), Telnet, FTP. Now as we know that Telnet
 and FTP traffic is unencrypted so we can check what is passing through it. So if
@@ -160,12 +161,12 @@ _Wireshark_ and copy that hexdump to _cyberchef_ you will get your flag.
 
     While investigating the solar wind attack we reached to one of the hacker and got something on his system but we are not able to get what this file is or is something more than file that can help us to login into there server.
 
-    FILE: <a href="https://github.com/codekingdroid/ByPassCTF-21/raw/main/MISC/Investigation/ByPass_final.bin">ByPass_final.bin</a>
+FILE: <a href="https://github.com/codekingdroid/ByPassCTF-21/raw/main/MISC/Investigation/ByPass_final.bin">ByPass_final.bin</a>
 
 <ol>
-	<li>Use command ‘_binwalk -e file.bin_’ </li><br>
+	<li>Use command ‘*binwalk -e file.bin*’ </li><br>
 	<li>Use unshadow and then crack the shadow and passwd file. </li><br>
-	<li>Brute force using _JohnTheRipper_ to get password which is the flag.</li><br>
+	<li>Brute force using *JohnTheRipper* to get password which is the flag.</li><br>
 </ol>
 
 ![](https://cdn-images-1.medium.com/max/800/1*yyMMnfXGGwGOeZi7TmalaA.png)
@@ -173,7 +174,7 @@ _Wireshark_ and copy that hexdump to _cyberchef_ you will get your flag.
 
 ### MEM FORENSIC
 
-    File: <a href="https://mega.nz/file/I8MlAQKb#H33ALwBplZ_ddR4f66FTjzGoPhYsGEJVyUP5yeRb_1w">here</a>
+File: <a href="https://mega.nz/file/I8MlAQKb#H33ALwBplZ_ddR4f66FTjzGoPhYsGEJVyUP5yeRb_1w">here</a>
 
 Before doing anything we have to find the profile for the image, you can use
 command: *vol.py iamgeinfo -f dump.raw*
@@ -255,7 +256,7 @@ internet entries.
 
 ### DISK FORENSIC
 
-    File: <a href="https://mega.nz/file/sslwxTZS#04UGnHdA8ilpkqFyudeCUPfeLlC2R_adba7JqEfKXH4">here</a>
+File: <a href="https://mega.nz/file/sslwxTZS#04UGnHdA8ilpkqFyudeCUPfeLlC2R_adba7JqEfKXH4">here</a>
 
 As we got the .EO1 we can open it using FTK Imager Tool and when we add it as
 evidence into the tool we got all the directory and contents.
@@ -297,11 +298,11 @@ means we can dump those files. So When we dump all that we found, it have lots
 of JS & CSS files when we check these files then in the jquery.max.js we have
 one code which have xored flag.
     
-    **<a href="https://gist.github.com/codekingdroid/7f9c12a60d5704b1d29d86e70990f3df">Self-Mistakes.cpp</a>**
+**<a href="https://gist.github.com/codekingdroid/7f9c12a60d5704b1d29d86e70990f3df">Self-Mistakes.cpp</a>**
 
 Just reverse the code to get the flag
     
-    **<a href="https://gist.github.com/codekingdroid/466c3763a0b2960df601e0771a619442">self-mistake-sol.py</a>**
+**<a href="https://gist.github.com/codekingdroid/466c3763a0b2960df601e0771a619442">self-mistake-sol.py</a>**
 
 ![](https://cdn-images-1.medium.com/max/800/1*pxZJPUt83wU2hUtBjSqi-Q.png)
 <br><span class="figcaption_hack">FLAG</span>
@@ -340,8 +341,10 @@ Just login and you will get your flag
 
 **1. GhostsEverywhere(100 | Easy)**
 
-    All I have is This image <a href="https://github.com/codekingdroid/ByPassCTF-21/raw/main/OSINT/GhostsEverywhere/chall.jpg">here</a>.
+    All I have is This image.
 
+<a href="https://github.com/codekingdroid/ByPassCTF-21/raw/main/OSINT/GhostsEverywhere/chall.jpg">here</a>
+	
 Check the metadata of the image you will find ***something is waiting for you at
 qZdp4***. Now read the name carefully it says “Ghost are every where” when you
 google if there is something like pastebin, you will find ghostbin. Now you have
